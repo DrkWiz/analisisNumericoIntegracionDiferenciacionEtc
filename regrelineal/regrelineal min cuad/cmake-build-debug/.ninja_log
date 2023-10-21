@@ -1,0 +1,13 @@
+# ninja log v5
+1	1793	7180681498160895	CMakeFiles/regrelineal_min_cuad.dir/main.cpp.obj	cc9313f1497f7a13
+1801	2484	7180681505045828	regrelineal_min_cuad.exe	4d5dc5a8743d463e
+5	1314	7180696337770322	CMakeFiles/regrelineal_min_cuad.dir/main.cpp.obj	cc9313f1497f7a13
+1315	1909	7180696343696244	regrelineal_min_cuad.exe	4d5dc5a8743d463e
+4	1053	7180721531532023	CMakeFiles/regrelineal_min_cuad.dir/main.cpp.obj	cc9313f1497f7a13
+1053	1637	7180721537356719	regrelineal_min_cuad.exe	4d5dc5a8743d463e
+4	785	7180723114866174	CMakeFiles/regrelineal_min_cuad.dir/main.cpp.obj	cc9313f1497f7a13
+785	943	7180723116446325	regrelineal_min_cuad.exe	4d5dc5a8743d463e
+3	806	7180725184491097	CMakeFiles/regrelineal_min_cuad.dir/main.cpp.obj	cc9313f1497f7a13
+813	974	7180725186156485	regrelineal_min_cuad.exe	4d5dc5a8743d463e
+4	747	7180725719380701	CMakeFiles/regrelineal_min_cuad.dir/main.cpp.obj	cc9313f1497f7a13
+747	899	7180725720880996	regrelineal_min_cuad.exe	4d5dc5a8743d463e

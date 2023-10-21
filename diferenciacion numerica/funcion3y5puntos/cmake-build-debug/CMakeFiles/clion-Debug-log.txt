@@ -1,0 +1,4 @@
+"F:\apps\Clion\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=F:/apps/Clion/CLion 2023.2.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S "F:\DTodoUPoco\analisis matematico 3\diferenciacion numerica\funcion3y5puntos" -B "F:\DTodoUPoco\analisis matematico 3\diferenciacion numerica\funcion3y5puntos\cmake-build-debug"
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: F:/DTodoUPoco/analisis matematico 3/diferenciacion numerica/funcion3y5puntos/cmake-build-debug

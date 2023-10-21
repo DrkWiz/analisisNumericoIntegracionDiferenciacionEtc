@@ -1,0 +1,3 @@
+F:/DTodoUPoco/analisis matematico 3/diferenciacion numerica/funcion3y5puntos/cmake-build-debug/CMakeFiles/funcion3y5puntos.dir
+F:/DTodoUPoco/analisis matematico 3/diferenciacion numerica/funcion3y5puntos/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/DTodoUPoco/analisis matematico 3/diferenciacion numerica/funcion3y5puntos/cmake-build-debug/CMakeFiles/rebuild_cache.dir

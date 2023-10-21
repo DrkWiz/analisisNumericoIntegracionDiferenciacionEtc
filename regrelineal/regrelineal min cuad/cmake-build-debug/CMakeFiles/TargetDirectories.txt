@@ -1,0 +1,3 @@
+F:/DTodoUPoco/analisis matematico 3/regrelineal/regrelineal min cuad/cmake-build-debug/CMakeFiles/regrelineal_min_cuad.dir
+F:/DTodoUPoco/analisis matematico 3/regrelineal/regrelineal min cuad/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/DTodoUPoco/analisis matematico 3/regrelineal/regrelineal min cuad/cmake-build-debug/CMakeFiles/rebuild_cache.dir
