@@ -1,0 +1,3 @@
+F:/DTodoUPoco/1 UNIVERSIDAD/2 ano/analisis numerico/programas/rerge lin diferen Integ ecuDifer/ecuDiferen/MetodoHeun/cmake-build-debug/CMakeFiles/MetodoHeun.dir
+F:/DTodoUPoco/1 UNIVERSIDAD/2 ano/analisis numerico/programas/rerge lin diferen Integ ecuDifer/ecuDiferen/MetodoHeun/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/DTodoUPoco/1 UNIVERSIDAD/2 ano/analisis numerico/programas/rerge lin diferen Integ ecuDifer/ecuDiferen/MetodoHeun/cmake-build-debug/CMakeFiles/rebuild_cache.dir
