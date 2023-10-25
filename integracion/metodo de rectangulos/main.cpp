@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <cmath>
 
 using namespace std;
 
@@ -11,15 +12,15 @@ using namespace std;
 // entonces tendremos la integral es: It = ((b-a)/2n) * [f(x0) + 2 * ( sumatoria(i=1 hasta n-1)(f(xi) + f(xn)) )]
 
 double f(double x) {
-    return x*x;
+    return 8 + 5 * cos(x);
 }
 
 double trapecios(vector<double> x, vector<double> y, int n) {
     double suma = 0;
-    for (int i = 1; i <= n - 2; i++) {
+    for (int i = 1; i <= n - 1; i++) {
         suma += y[i];
     }
-    return ((x[n - 1] - x[0]) / (2 * n)) * (y[0] + 2 * suma + y[n - 1]);
+    return ((x[n] - x[0]) / (2 * n)) * (y[0] + 2 * suma + y[n]);
 }
 
 int main() {
@@ -28,8 +29,8 @@ int main() {
     vector<double> y;
 
     double inicio = 0;
-    double fin = 1;
-    double h= 0.001;
+    double fin = M_PI;
+    double h= M_PI/10;
 
     for(double i = inicio ; i <= fin ; i += h) {
         x.push_back(i);
@@ -41,7 +42,7 @@ int main() {
         cout << x[i] << "\t\t" << y[i] << endl;
     }
 
-    cout << "El resultado de la integral es: " << trapecios(x, y, x.size()) << endl;
+    cout << "El resultado de la integral es: " << trapecios(x, y, x.size()-1) << endl;
 
     return 0;
 }

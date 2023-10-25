@@ -23,22 +23,18 @@ double f(double x){
     return ((x*x*x+3*x-2)/(x*x-4));
 }
 
-void Fde3p(vector<double> x, vector<double> y, double h,vector<double>& derivadas){
-
-//fórmula de los tres puntos progresiva: f'(x0 = ((-3f(x0) + 4f(x0+h) - f(x0+2h)) / 2h) + O(h^2) .
-                              derivadas.push_back((-3*y[0] + 4*y[1]   - y[2])     / (2*h));
-    for(int i = 1; i < x.size()-1; i++){
-//fórmula de los tres puntos centrada: f'(x0) = ((f(x0+h) - f(x0-h)) / 2h) + O(h^2)
-                             derivadas.push_back((y[i+1]  - y[i-1])  / (2*h));
-    }
-//fórmula de los tres puntos regresiva: f'(x0) = ((f(x0-2h)      - 4f(x0-h)        + 3f(x0)) / 2h)    + O(h^2)
-                              derivadas.push_back((y[y.size()-3] - 4*y[y.size()-2] + 3*y[y.size()-1]) / (2*h));
+void Fde3p(vector<double> x, vector<double> y, double h, vector<double>& derivadas) {
+    derivadas.push_back((-3 * y[0] + 4 * y[1] - y[2]) / (2 * h));
     cout << "Xi\t\t\tf(Xi)\t\t\tf'(Xi)\t\t\tObservaciones" << endl;
     cout << x[0] << "\t\t" << y[0] << "\t\t" << derivadas[0] << "\t\tEc. progresiva" << endl;
-    for(int i =0; i < x.size()-1; i++){
-        cout << x[i+1] << "\t\t" << y[i+1] << "\t\t" << derivadas[i+1] << "\t\tEc. centrada" << endl;
+
+    for (int i = 1; i < x.size() - 1; i++) {
+        derivadas.push_back((y[i + 1] - y[i - 1]) / (2 * h));
+        cout << x[i] << "\t\t" << y[i] << "\t\t" << derivadas[i] << "\t\tEc. centrada" << endl;
     }
-    cout << x[x.size()-1] << "\t\t" << y[y.size()-1] << "\t\t" << derivadas[derivadas.size()-1] << "\t\tEc. regresiva" << endl;
+
+    derivadas.push_back((y[y.size() - 3] - 4 * y[y.size() - 2] + 3 * y[y.size() - 1]) / (2 * h));
+    cout << x[x.size() - 1] << "\t\t" << y[y.size() - 1] << "\t\t" << derivadas[derivadas.size() - 1] << "\t\tEc. regresiva" << endl;
 }
 
 void Fde5p(vector<double> x, vector<double> y, double h,vector<double>& derivadas){
@@ -68,12 +64,12 @@ void Fde5p(vector<double> x, vector<double> y, double h,vector<double>& derivada
 
 
 int main() {
-    double h = 0.1;
-    vector<double> x;
-    vector<double> y;
+    double h = 0.1; //acordate de colocar el H nuevo
+    vector<double> x={0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7}; //acordate de colocar el H nuevo
+    vector<double> y={1.0,1.09965,1.19706,1.28957,1.37406,1.44689,1.50386,1.54020}; //acordate de colocar el H nuevo
     vector<double> derivadas;
-    double inicio=-1,fin=1;
-
+    double inicio=0.0,fin=2.0;
+/*
     for(double i = inicio; i < fin+h; i+=h){
         x.push_back(i);
     }
@@ -81,7 +77,7 @@ int main() {
     for(double i : x){
         y.push_back(f(i));
     }
-
+*/
     cout << "-----------------------------------------------------------------------------------------------------------------------" << endl;
     cout << "Lista de puntos a analizar con h="<< h <<" : " << endl;
     cout << fixed << showpoint << setprecision(7);

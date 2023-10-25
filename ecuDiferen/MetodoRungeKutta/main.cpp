@@ -67,7 +67,7 @@ void RK3(double h, double inicio, double final, double Y0, vector<double> &x, ve
 }
 
 void RK4(double h, double inicio, double final, double Y0, vector<double> &x, vector<double> &y, vector<double> &K1, vector<double> &K2, vector<double> &K3, vector<double> &K4) {
-    //METODO DE RUNGE KUTTA DE CUARTO ORDEN:
+    //METODO DE RUTTA DE CUARTO ORDEN:
     // yi+1 = yi + (1/6 * (K1 + 2 * K2 + 2 * K3 + K4)) * h
     // con K1 = f(xi, yi)
     // y con K2 = f(xi + 0.5 * h, yi + 0.5 * K1 * h)
