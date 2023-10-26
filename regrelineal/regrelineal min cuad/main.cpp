@@ -40,15 +40,24 @@ using namespace std;
 //
 
 
-bool eslineal(vector<double> x, vector<double> y) {
-    bool lineal = true;
-    for (int i = 0 ; i < x.size() ; i++) {
-        if (x[i] * y[i] != 0) {
-            lineal = false;
-            break;
+bool eslineal(const std::vector<double>& x, const std::vector<double>& y) {
+    if (x.size() != y.size() || x.size() < 2) {
+        // Si los vectores no tienen el mismo tamaño o contienen menos de 2 puntos, no se puede determinar si son lineales.
+        return false;
+    }
+
+    double pendiente = (y[1] - y[0]) / (x[1] - x[0]);
+
+    for (size_t i = 2; i < x.size(); i++) {
+        double nuevaPendiente = (y[i] - y[i-1]) / (x[i] - x[i-1]);
+        if (nuevaPendiente != pendiente) {
+            // Si alguna pendiente es diferente, los puntos no forman una línea recta.
+            return false;
         }
     }
-    return lineal;
+
+    // Si todas las pendientes son iguales, los puntos forman una línea recta.
+    return true;
 }
 
 void regresionLinealPorMinimosCuadrados(vector<double> x, vector<double> y,double& a0,double& a1) {
@@ -118,24 +127,31 @@ void regresionLinealCrecimiento(vector<double> x, vector<double> y,double& a0,do
 
 int main() {
 
-    vector<double> x = {1, 2, 3, 4, 5};
-    vector<double> y = {0.5,1.7,3.4,5.7,8.4};
+    vector<double> x ={0.05,0.4,0.8,1.2,1.6,2.0,2.4
+            };
+    vector<double> y ={550,750,1000,1400,2000,2700,3750} ;
     double a0=0,a1=0;
 
 
-    if(eslineal(x,y)) {
-        cout << "regresion lineal por minimos cuadrados" << "\n";
-        regresionLinealPorMinimosCuadrados(x, y, a0 = 0, a1 = 0);
-        cout << "\n";
+    if(eslineal(x,y)){
+        cout << "es lineal" << "\n";
     }else {
-        cout << "regresion lineal exponencial" << "\n";
-        regresionLinealExponencial(x, y, a0 = 0, a1 = 0);
-        cout << "\n";
-        cout << "regresion lineal potencial" << "\n";
-        regresionLineaPotencial(x, y, a0 = 0, a1 = 0);
-        cout << "\n";
-        cout << "regresion lineal crecimiento" << "\n";
-        regresionLinealCrecimiento(x, y, a0 = 0, a1 = 0);
+        cout << "no es lineal" << "\n";
     }
-    return 0;
+
+    //if(eslineal(x,y)) {
+       // cout << "regresion lineal por minimos cuadrados" << "\n";
+        //regresionLinealPorMinimosCuadrados(x, y, a0 = 0, a1 = 0);
+        //cout << "\n";
+    //}else {
+        cout << "regresion lineal exponencial" << "\n";
+       regresionLinealExponencial(x, y, a0 = 0, a1 = 0);
+       // cout << "\n";
+       // cout << "regresion lineal potencial" << "\n";
+       ///regresionLineaPotencial(x, y, a0 = 0, a1 = 0);
+       // cout << "\n";
+      //  cout << "regresion lineal crecimiento" << "\n";
+       // regresionLinealCrecimiento(x, y, a0 = 0, a1 = 0);
+   // }
+   // return 0;
 }
